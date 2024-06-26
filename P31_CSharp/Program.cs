@@ -4,6 +4,33 @@ namespace P31_CSharp
 {
     internal class Program
     {
+        static int Sum(int a, int b)
+        {
+            return a + b;
+        }
+
+        static int Sum(int a, int b, int c = 0)
+        {
+            return a + b + c;
+        }
+
+
+        static void Func(ref int a, ref int[] arr, out int b)
+        {
+            b = 99;
+            a = 100;
+            arr = new int[] { 5, 6, 7 };
+            //arr[0] = 100;   
+        }
+
+
+        static void Swap(ref int a, ref int b)
+        {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
         static void Main(string[] args)
         {
             Console.Title = "P31 C#";
@@ -11,6 +38,75 @@ namespace P31_CSharp
             Console.ForegroundColor = ConsoleColor.White;
             Console.OutputEncoding = Encoding.UTF8;
             Console.Clear();
+
+
+
+            // 26.09.2024
+            //==============================================================================
+
+            //Point point = new Point();
+            //point.X = 5;
+            //point.Y = 10;
+            //point.Print();
+
+            //Student student = new Student(10, "Igor"); 
+            //student.Print();
+
+            //student.SetAge(20);
+            //Console.WriteLine(student.GetAge());
+
+            //student.MyProperty = 100;
+            //Console.WriteLine(student.MyProperty);
+            //Student.GetCount();
+            //Console.WriteLine(Student.MAX);
+            //Console.WriteLine(student.MIN);
+
+
+
+            //    Створіть клас «Місто». Необхідно зберігати у полях 
+            //    класу: назву міста, назву країни, кількість 
+            //    жителів у місті, телефонний код міста, назву 
+            //    районів міста. Реалізуйте методи класу для 
+            //    введення даних, виведення даних.Реалізуйте 
+            //    доступ до окремих полів через методи класу.  
+
+
+            //City city = new City("Mykolaiv", "Ukraine", 500000, "+380512");
+            //city.AddDistrict("Tsentralnyi");
+            //city.AddDistrict("Zavodskyi");
+            //city.AddDistrict("Korabelniy");
+            //city.AddDistrict("Leninskiy");
+            //city.Info();
+            //city.Districts[3] = "Ingulskiy";
+            //Console.WriteLine();
+            //city.Info();
+
+
+
+            //int a = Sum(5, 10);
+            //Console.WriteLine(a);
+
+            //Console.WriteLine(Sum(3, 5));
+
+
+            int a = 10;
+            int[] arr = { 1, 2, 3 };
+            int b = 20;
+            //Func(ref a, ref arr, out b);
+            //Console.WriteLine(a);
+            //Console.WriteLine(b);
+            //foreach (var item in arr)
+            //{
+            //    Console.Write(item + " ");
+            //}
+            //Console.WriteLine();
+
+            Swap(ref a, ref b);
+            Console.WriteLine($"{a} {b}");
+
+
+
+
 
 
             // 22.09.2024
@@ -32,7 +128,7 @@ namespace P31_CSharp
             //    Console.Write(i + " ");
             //}
 
-            Random rand = new Random();
+            //Random rand = new Random();
 
 
             //int[] arr = new int[10];
@@ -155,32 +251,32 @@ namespace P31_CSharp
 
 
 
-            string st = "Hello";
-            Console.WriteLine($"{st.PadLeft(10, '.')}");
-            Console.WriteLine($"{st.PadRight(10)}rtert");
-            st += " C#";
+            //string st = "Hello";
+            //Console.WriteLine($"{st.PadLeft(10, '.')}");
+            //Console.WriteLine($"{st.PadRight(10)}rtert");
+            //st += " C#";
 
-            StringBuilder sb = new StringBuilder();
-            sb.Append("mama");
-            sb.AppendLine(st);
-            sb.Append("45345");
-            string st1 = sb.ToString();
-            Console.WriteLine(st1);
+            //StringBuilder sb = new StringBuilder();
+            //sb.Append("mama");
+            //sb.AppendLine(st);
+            //sb.Append("45345");
+            //string st1 = sb.ToString();
+            //Console.WriteLine(st1);
 
             //Користувач вводить речення з    клавіатури.
             //Вам необхідно підрахувати кількість слів у ньому.
 
-            string st3 = "Користувач     вводить      речення";
-            Console.WriteLine(st3.Split(".,!? ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries).Length);
+            //string st3 = "Користувач     вводить      речення";
+            //Console.WriteLine(st3.Split(".,!? ".ToCharArray(), StringSplitOptions.RemoveEmptyEntries).Length);
 
-            string st4 = "sun cat dogs cup tea";
-            string[] st5 = st4.Split();
-            for (int i = 0; i < st5.Length; i++)
-            {
-                st5[i].Reverse();
-            }
-            string st6 = String.Join(' ', st5);
-            Console.WriteLine(st6);
+            //string st4 = "sun cat dogs cup tea";
+            //string[] st5 = st4.Split();
+            //for (int i = 0; i < st5.Length; i++)
+            //{
+            //    st5[i].Reverse();
+            //}
+            //string st6 = String.Join(' ', st5);
+            //Console.WriteLine(st6);
 
             //================================================================================
 
