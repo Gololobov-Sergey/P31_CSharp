@@ -31,6 +31,31 @@ namespace P31_CSharp
             b = temp;
         }
 
+        static void Divided(int a, int b)
+        {
+            if (b == 0)
+            {
+                //throw new MyException("Divided by zero");
+            }
+            Console.WriteLine(a / b);
+        }
+
+
+        static void Divided1(int a, int b)
+        {
+            try
+            {
+                Divided(a, b);
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw new Exception("Zero!!", ex);
+            }
+
+        }
+
+
         static void Main(string[] args)
         {
             Console.Title = "P31 C#";
@@ -41,7 +66,77 @@ namespace P31_CSharp
 
 
 
-            // 26.09.2024
+            // 29.06.2024
+            //==============================================================================
+
+
+
+            //int a = 2000000000;
+            //try
+            //{
+            //    //checked
+            //    //{
+            //    a *= 2;
+            //    // }
+            //    unchecked
+            //    {
+
+            //    }
+
+            //    //
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+
+
+            //Console.WriteLine(a);
+
+
+
+            //string num = "1234567890123456";
+            //foreach (char item in num)
+            //{
+            //    if(!char.IsDigit(item))
+            //    {
+            //        throw new MyException(CreditCardError.InvalidCardNumber, num.ToString());
+            //    }
+            //}
+
+
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine(a / b);
+            try
+            {
+                Divided1(a, b);
+                //
+
+            }
+            catch (Exception ex) when (ex.InnerException != null)
+            {
+                Console.WriteLine(ex.HelpLink);
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.InnerException);
+                Console.WriteLine(ex.TargetSite);
+                Console.WriteLine(ex.Data);
+                Console.WriteLine(ex.Source);
+                Console.WriteLine(ex.StackTrace);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Fatal error");
+            }   
+            finally
+            {
+                Console.WriteLine("Finally");
+            }
+
+
+
+
+            // 26.06.2024
             //==============================================================================
 
             //Point point = new Point();
@@ -89,9 +184,9 @@ namespace P31_CSharp
             //Console.WriteLine(Sum(3, 5));
 
 
-            int a = 10;
-            int[] arr = { 1, 2, 3 };
-            int b = 20;
+            //int a = 10;
+            //int[] arr = { 1, 2, 3 };
+            //int b = 20;
             //Func(ref a, ref arr, out b);
             //Console.WriteLine(a);
             //Console.WriteLine(b);
@@ -101,15 +196,15 @@ namespace P31_CSharp
             //}
             //Console.WriteLine();
 
-            Swap(ref a, ref b);
-            Console.WriteLine($"{a} {b}");
+            //Swap(ref a, ref b);
+            //Console.WriteLine($"{a} {b}");
 
 
 
 
 
 
-            // 22.09.2024
+            // 22.06.2024
             //==============================================================================
 
 
