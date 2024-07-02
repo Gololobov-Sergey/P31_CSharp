@@ -40,6 +40,59 @@ namespace P31_CSharp
             Console.Clear();
 
 
+            Point p1 = new Point(5, 10);
+            Point p2 = new Point(5, 13);
+
+            Point p3 = p1 * 10;
+            p3 = 10 * p1;
+
+            //Point p3 = -p1;
+            //(++p1).Print();
+            //(p1++).Print();
+            //p1.Print(); 
+            //p3 = p1++;
+            //p3 = ++p1;
+            //p3.Print();
+
+
+            //Point p3 = p1.Add(p2);
+            //Point p3 = p1 + p2;
+
+            //p2 += p1;
+            //p2 = p2 + p1;
+
+
+            if(p2.Equals(p1))
+            {
+                Console.WriteLine("==");
+            }
+            else
+            {
+               Console.WriteLine("!=");
+            }
+            
+            if(p1 && p2 || p3)
+            {
+
+            }
+
+            float f = (float)p1;
+            
+            
+            // = , ?: , new , is , as , -> , *, . , sizeof, += , .... %= 
+
+            // - , + , ++ , -- ,
+            // + , - , / , * , % , 
+
+            // ! , 
+            // == , != , > , < , >= , <= ,
+
+
+            //int a = -9;
+
+            //a = +a;
+
+
 
             // 26.09.2024
             //==============================================================================
@@ -89,9 +142,9 @@ namespace P31_CSharp
             //Console.WriteLine(Sum(3, 5));
 
 
-            int a = 10;
-            int[] arr = { 1, 2, 3 };
-            int b = 20;
+            //int a = 10;
+            //int[] arr = { 1, 2, 3 };
+            //int b = 20;
             //Func(ref a, ref arr, out b);
             //Console.WriteLine(a);
             //Console.WriteLine(b);
@@ -101,8 +154,8 @@ namespace P31_CSharp
             //}
             //Console.WriteLine();
 
-            Swap(ref a, ref b);
-            Console.WriteLine($"{a} {b}");
+            //Swap(ref a, ref b);
+            //Console.WriteLine($"{a} {b}");
 
 
 
