@@ -102,8 +102,31 @@ namespace P31_CSharp
             }
 
             float f = (float)p1;
+
+            // Array
+            //set (random)
+            //print
+            //* n
+            //+ (add value)
+            //float  = avg(array) 
+
+            Array arr = new Array(10);
+            arr.Set(10, 30);
+            arr.Print();
+            arr *= 2;
+            arr += 100;
+            float avg = arr;
+            Console.WriteLine($"Avg = {avg}");
+            //
+
+            //Array arr = new Array();
+            //int a = arr.Get(index: 10);
+            //Console.WriteLine();
+
+
             
-            
+
+
             // = , ?: , new , is , as , -> , *, . , sizeof, += , .... %= 
 
             // - , + , ++ , -- ,
