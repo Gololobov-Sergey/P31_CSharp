@@ -59,17 +59,67 @@ namespace P31_CSharp
         static void Main(string[] args)
         {
             Console.Title = "P31 C#";
-            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
             Console.ForegroundColor = ConsoleColor.White;
             Console.OutputEncoding = Encoding.UTF8;
             Console.Clear();
 
+            // 04.07.2024 ===============================================
 
-            Point p1 = new Point(5, 10);
-            Point p2 = new Point(5, 13);
+            //Apple a1 = new Apple("Red", 10);
+            //Apple a2 = new Apple("Green", 20);
+            //Kompot k = a1 + a2; // a1.operator+(a2)
+            //k.Print();
+            //Console.WriteLine();
+            //Apple a3 = new Apple("Yellow", 30);
+            //k += a3;  // k = k + a3;
+            //k.AddSugar(50);
+            //k.Print();
+            //Console.WriteLine();
 
-            Point p3 = p1 * 10;
-            p3 = 10 * p1;
+            //k[1].Print();
+            //Console.WriteLine(k["Sugar"]);
+            //Console.WriteLine(k["Apples"]);
+            //try
+            //{
+            //    Console.WriteLine(k["Water"]);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+            
+
+            //Matrix m = new Matrix(3, 4);    
+            //m.Set();
+            //m.Print();
+            //m[1, 1] = 100;
+            //Console.WriteLine(m[0, 0]);
+            //m.Print();
+
+
+
+            Shop shop = new Shop(5);
+            shop.AddProduct(new Product("Milk", 10, 5)); // name, price, count
+            shop.AddProduct(new Product("Bread", 5, 10));
+            shop.AddProduct(new Product("Butter", 20, 3));
+            shop.AddProduct(new Product("Milk", 10, 50));
+
+            Console.WriteLine(shop["Milk"]); // total cost milk - $550 
+            Console.WriteLine(shop[2]); // "Butter", 20, 3
+
+
+            //MyVar v1 = new MyVar(3);
+            //MyVar v2 = new MyVar(3.14);
+            //MyVar v3 = new MyVar("Hello");
+
+            //int a = v1;
+
+            //Point p1 = new Point(5, 10);
+            //Point p2 = new Point(5, 13);
+
+            //Point p3 = p1 * 10;
+            //p3 = 10 * p1;
 
             //Point p3 = -p1;
             //(++p1).Print();
@@ -87,21 +137,21 @@ namespace P31_CSharp
             //p2 = p2 + p1;
 
 
-            if(p2.Equals(p1))
-            {
-                Console.WriteLine("==");
-            }
-            else
-            {
-               Console.WriteLine("!=");
-            }
-            
-            if(p1 && p2 || p3)
-            {
+            //if(p2.Equals(p1))
+            //{
+            //    Console.WriteLine("==");
+            //}
+            //else
+            //{
+            //   Console.WriteLine("!=");
+            //}
 
-            }
+            //if(p1 && p2 || p3)
+            //{
 
-            float f = (float)p1;
+            //}
+
+            //float f = (float)p1;
 
             // Array
             //set (random)
@@ -110,13 +160,13 @@ namespace P31_CSharp
             //+ (add value)
             //float  = avg(array) 
 
-            Array arr = new Array(10);
-            arr.Set(10, 30);
-            arr.Print();
-            arr *= 2;
-            arr += 100;
-            float avg = arr;
-            Console.WriteLine($"Avg = {avg}");
+            //Array arr = new Array(10);
+            //arr.Set(10, 30);
+            //arr.Print();
+            //arr *= 2;
+            //arr += 100;
+            //float avg = arr;
+            //Console.WriteLine($"Avg = {avg}");
             //
 
             //Array arr = new Array();
@@ -124,7 +174,7 @@ namespace P31_CSharp
             //Console.WriteLine();
 
 
-            
+
 
 
             // = , ?: , new , is , as , -> , *, . , sizeof, += , .... %= 
@@ -181,33 +231,33 @@ namespace P31_CSharp
             //}
 
 
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
-            //Console.WriteLine(a / b);
-            try
-            {
-                Divided1(a, b);
-                //
+            //int a = Convert.ToInt32(Console.ReadLine());
+            //int b = Convert.ToInt32(Console.ReadLine());
+            ////Console.WriteLine(a / b);
+            //try
+            //{
+            //    Divided1(a, b);
+            //    //
 
-            }
-            catch (Exception ex) when (ex.InnerException != null)
-            {
-                Console.WriteLine(ex.HelpLink);
-                Console.WriteLine(ex.Message);
-                Console.WriteLine(ex.InnerException);
-                Console.WriteLine(ex.TargetSite);
-                Console.WriteLine(ex.Data);
-                Console.WriteLine(ex.Source);
-                Console.WriteLine(ex.StackTrace);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Fatal error");
-            }   
-            finally
-            {
-                Console.WriteLine("Finally");
-            }
+            //}
+            //catch (Exception ex) when (ex.InnerException != null)
+            //{
+            //    Console.WriteLine(ex.HelpLink);
+            //    Console.WriteLine(ex.Message);
+            //    Console.WriteLine(ex.InnerException);
+            //    Console.WriteLine(ex.TargetSite);
+            //    Console.WriteLine(ex.Data);
+            //    Console.WriteLine(ex.Source);
+            //    Console.WriteLine(ex.StackTrace);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine("Fatal error");
+            //}   
+            //finally
+            //{
+            //    Console.WriteLine("Finally");
+            //}
 
 
 
